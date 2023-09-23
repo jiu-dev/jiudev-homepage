@@ -1,0 +1,56 @@
+import Capsule from '../components/Capsule'
+import Layout from '../components/layouts/article'
+
+const Project = () => {
+  return (
+    <Layout>
+      <div className="flex h-full">
+        <div className="w-1/2 h-full flex flex-col items-center justify-center">
+          <div>
+            <h3 className="text-4xl text-center mb-4">CvFlow</h3>
+            <Capsule>
+              CvFlow est une application conçue pour maximiser l'efficacité dans
+              la mise à jour des CV des collaborateurs. Cette application est
+              unique en ce qu'elle s'intègre à un écosystème complet
+              d'applications tierces, automatisant ainsi la mise à jour des CV.
+              Grâce à cette intégration, les utilisateurs bénéficient d'une
+              expérience optimisée, éliminant le besoin de mises à jour
+              manuelles répétées.
+            </Capsule>
+            <ul>
+              <li>
+                <a>Voir plus</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="w-1/2 h-full flex items-center justify-center">
+          <div>
+            <h3 className="text-4xl">Projets</h3>
+            <div className="relative mt-6 rounded-lg">
+              <div className="absolute w-1 h-32 bg-white rounded-3xl"></div>
+              <div className="absolute h-1 w-24 bg-white rounded-3xl"></div>
+              <ul className="flex flex-col font-thin gap-4 p-6 bg-indigo-300/30 rounded-br-3xl">
+                <li>
+                  <a>CvFlow</a>
+                </li>
+                <li>
+                  <a>SBM Offshore</a>
+                </li>
+                <li>
+                  <a>E-Shop Vanira</a>
+                </li>
+
+                <li>
+                  <a>Space - Portfolio</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default Project
