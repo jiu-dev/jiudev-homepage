@@ -6,15 +6,9 @@ const Project = () => {
     <Layout>
       <div className="flex h-full">
         <div className="w-1/3 h-full ">
-          <div className="flex flex-col gap-6 mt-6">
-            <div className="flex gap-6 items-center">
-              <div className="rounded-full w-16 h-16 bg-indigo-300"></div>
-              <span>CvFlow</span>
-            </div>
-            <div className="flex gap-6 items-center">
-              <div className="rounded-full w-16 h-16 bg-indigo-300"></div>
-              <span>CvFlow</span>
-            </div>
+          <div className="flex flex-col items-center gap-6 mt-6">
+            <span>Oui</span>
+            <span>Oui</span>
           </div>
         </div>
         <div className="w-2/3 h-full flex flex-col items-center justify-center">
