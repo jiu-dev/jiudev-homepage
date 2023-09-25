@@ -11,8 +11,8 @@ const Navbar = props => {
   return (
     <div className="flex items-center justify-between h-full w-full">
       <div className="flex items-center justify-start gap-6">
-        <div className="w-14 h-14 p-2 border-4 border-white rounded-full bg-amber-500 ">
-          <PlanetIcon className="text-white w-full" />
+        <div className="flex-none w-14 h-14 p-2 border-4 border-white rounded-full bg-amber-500 ">
+          <PlanetIcon className="text-white h-full w-full" />
         </div>
         <div className="flex flex-col">
           <a href="/" className="text-lg text-white sm:text-xl">
@@ -41,11 +41,14 @@ const Navbar = props => {
           </li>
         </ul>
       </div>
-      <div className="relative flex gap-4">
-        <Menu as="div" className=" md:hidden block ">
-          <div>
-            <Menu.Button className="inline-flex w-10 h-10 justify-center border-4 border-white rounded-lg bg-indigo-300 p-1 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-              <HamburgerIcon className="w-full" />
+      <div>
+        <Menu as="div" className="md:hidden inline-block mr-2">
+          <div className="border-4 overflow-hidden border-white rounded-lg">
+            <Menu.Button
+              as="div"
+              className="w-8 h-8 bg-indigo-300 p-1 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+            >
+              <HamburgerIcon className="w-full h-full" />
             </Menu.Button>
           </div>
           <Transition
@@ -103,7 +106,7 @@ const Navbar = props => {
             </Menu.Items>
           </Transition>
         </Menu>
-        <div className="p-1 border-4 border-white bg-amber-500 rounded-lg w-10 h-10 ">
+        <div className="inline-block p-1 border-4 border-white bg-amber-500 rounded-lg w-10 h-10 ">
           <StarsIcon className="w-full text-white" />
         </div>
       </div>

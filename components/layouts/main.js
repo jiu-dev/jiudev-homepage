@@ -3,6 +3,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Copyright from '../Copyright'
 import MessageBubble from '../MessageBubble'
+import Galaxy from '../Galaxy'
 
 const Main = ({ children, router }) => {
   return (
@@ -23,7 +24,8 @@ const Main = ({ children, router }) => {
           <div className="px-8 py-4 sm:h-1/6 bg-indigo-300/40 sm:px-8">
             <Navbar path={router.asPath} />
           </div>
-          <div className="grow relative sm:h-4/6 overflow-scroll no-scrollbar">
+          <div className="grow overflow-hidden relative sm:h-4/6">
+            <Galaxy />
             {children}
           </div>
           <div className="px-8 py-4 bg-indigo-300/40 sm:h-1/6 sm:px-8">

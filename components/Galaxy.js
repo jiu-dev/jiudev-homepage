@@ -33,7 +33,7 @@ const Galaxy = () => {
   }, [])
 
   return (
-    <div ref={galaxyRef} className="galaxy min-h-screen absolute">
+    <div ref={galaxyRef} className="galaxy w-full h-full absolute">
       {/* Initial stars can be added here if required */}
     </div>
   )

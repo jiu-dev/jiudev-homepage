@@ -3,7 +3,6 @@ import Layout from '../components/layouts/article'
 import DottedTabMenu from '../components/DottedTabMenu'
 import DottedTab from '../components/DottedTab'
 import { projets } from '../lib/portfolio'
-import Galaxy from '../components/Galaxy'
 
 const Portfolio = () => {
   const [selectedTab, setSelectedTab] = useState(0)
@@ -15,7 +14,6 @@ const Portfolio = () => {
 
   return (
     <Layout>
-      <Galaxy />
       <div className="flex z-10 relative justify-center h-full flex-col md:flex-row-reverse mx-10">
         <div className="flex md:flex-none md:ml-10 md:mr-14">
           <div className="ml-10 mb-6 md:hidden">
