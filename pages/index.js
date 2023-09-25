@@ -17,9 +17,10 @@ const Home = () => {
               <Heading>Portrait</Heading>
               <Paragraph className="indent-4">
                 Matahi est un développeur full-stack basé à Bordeaux. En tant
-                qu'autodidacte passionné, il se dédie à la création de solutions
-                technologiques innovantes. Sa curiosité naturelle l'amène à
-                toujours chercher à résoudre des problèmes complexes.{' '}
+                qu&apos;autodidacte passionné, il se dédie à la création de
+                solutions technologiques innovantes. Sa curiosité naturelle
+                l&apos;amène à toujours chercher à résoudre des problèmes
+                complexes.
               </Paragraph>
 
               <Heading>Bio</Heading>
@@ -34,8 +35,8 @@ const Home = () => {
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2022</span>
-                  Validation du cursus d'ingénierie informatique à l'EPSI
-                  Bordeaux.
+                  Validation du cursus d&apos;ingénierie informatique à
+                  l&apos;EPSI Bordeaux.
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2023</span>
@@ -43,8 +44,8 @@ const Home = () => {
                 </div>
               </Paragraph>
 
-              <Heading>I ♥</Heading>
-              <Paragraph>Jiu-jitsu, Neovim, Skate et l'Art.</Paragraph>
+              <Heading>I &hearts;</Heading>
+              <Paragraph>Jiu-jitsu, Neovim, Skate et l&apos;Art.</Paragraph>
             </div>
           </div>
         </div>

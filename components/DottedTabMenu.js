@@ -6,7 +6,6 @@ const DottedTabMenu = ({
   setSelectedTab,
   itemsByMenu
 }) => {
-  //Number of Item for each Menu
   const splitArrayInChunks = chunkSize => {
     let result = []
     for (let i = 0; i < React.Children.count(children); i += chunkSize) {
@@ -19,10 +18,11 @@ const DottedTabMenu = ({
     return c.map((item, byTwoIndex) => {
       const chunkSize = item.length
       return (
-        <div className="relative font-thin">
+        <div key={byTwoIndex} className="relative font-thin">
           <div className="flex flex-col z-40">
             {React.Children.map(item, (child, index) =>
               React.cloneElement(child, {
+                key: index,
                 isActive: byTwoIndex * chunkSize + index === selectedTab,
                 isLast: (index + 1) % chunkSize === 0,
                 onClick: () => setSelectedTab(byTwoIndex * chunkSize + index)

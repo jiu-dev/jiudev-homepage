@@ -27,8 +27,10 @@ const Portfolio = () => {
                 setSelectedTab={setSelectedTab}
                 itemsByMenu={2}
               >
-                {projets.map(projet => (
-                  <DottedTabMenu.Item>{projet.title}</DottedTabMenu.Item>
+                {projets.map((projet, index) => (
+                  <DottedTabMenu.Item key={index}>
+                    {projet.title}
+                  </DottedTabMenu.Item>
                 ))}
               </DottedTabMenu>
             </div>
@@ -39,8 +41,10 @@ const Portfolio = () => {
               selectedTab={selectedTab}
               setSelectedTab={setSelectedTab}
             >
-              {projets.map(projet => (
-                <DottedTabMenu.Item>{projet.title}</DottedTabMenu.Item>
+              {projets.map((projet, index) => (
+                <DottedTabMenu.Item key={index}>
+                  {projet.title}
+                </DottedTabMenu.Item>
               ))}
             </DottedTabMenu>
           </div>
@@ -49,8 +53,10 @@ const Portfolio = () => {
           <DottedTab>
             <DottedTab.Title>{currentProject.title}</DottedTab.Title>
             <DottedTab.Subtitle>
-              {currentProject.skills.map(skill => (
-                <DottedTab.Subtitle.Item>{skill}</DottedTab.Subtitle.Item>
+              {currentProject.skills.map((skill, index) => (
+                <DottedTab.Subtitle.Item key={index}>
+                  {skill}
+                </DottedTab.Subtitle.Item>
               ))}
             </DottedTab.Subtitle>
 
