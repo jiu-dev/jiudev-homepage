@@ -6,7 +6,7 @@ import MessageBubble from '../MessageBubble'
 
 const Main = ({ children, router }) => {
   return (
-    <main className="font-mplus-rounded font-bold">
+    <main className="font-mplus-rounded font-bold bg-firstplan">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Portfolio de Matahi" />
@@ -15,7 +15,7 @@ const Main = ({ children, router }) => {
         <title>Matahi Fareea - Portfolio</title>
       </Head>
 
-      <div className="flex items-center justify-center bg-firstplan w-full h-screen sm:p-14 md:p-20 xl:p-40 ">
+      <div className="flex items-center justify-center w-full h-screen sm:p-14 md:p-20 xl:p-40 ">
         <span className="absolute hidden whitespace-nowrap sm:block sm:top-7 md:top-10 xl:top-20  left-1/2 -translate-y-1/2 -translate-x-1/2">
           <MessageBubble message="Bonjour ! Je m'appelle Matahi, bienvenue sur mon Portfolio :)" />
         </span>

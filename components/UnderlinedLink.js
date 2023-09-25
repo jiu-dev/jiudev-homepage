@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import NextLink from 'next/link'
+import Link from 'next/link'
 
 const UnderlinedLink = ({ href, path, target, children, active, ...props }) => {
   const isActive = () => {
@@ -21,15 +21,9 @@ const UnderlinedLink = ({ href, path, target, children, active, ...props }) => {
       animate={isActive() ? 'active' : 'rest'}
       whileHover="hover"
     >
-      <a
-        as={NextLink}
-        href={href}
-        target={target}
-        className="z-10 relative"
-        {...props}
-      >
+      <Link href={href} target={target} className="z-10 relative" {...props}>
         {children}
-      </a>
+      </Link>
       <motion.span
         className=" absolute h-1 bg-current left-1/2 bottom-0 transform -translate-x-1/2"
         variants={underlineVariants}
