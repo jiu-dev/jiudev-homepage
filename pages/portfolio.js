@@ -55,7 +55,10 @@ const Portfolio = () => {
             <DottedTab.Subtitle>
               {currentProject.skills.map((skill, index) => (
                 <DottedTab.Subtitle.Item key={index}>
-                  {skill}
+                  <div className="flex items-center gap-2">
+                    <span className="w-8 h-8 text-white">{skill.icon}</span>
+                    <span>{skill.title}</span>
+                  </div>
                 </DottedTab.Subtitle.Item>
               ))}
             </DottedTab.Subtitle>

@@ -42,7 +42,9 @@ const DottedTabSubtitle = ({ children }) => (
 )
 
 const DottedTabBody = ({ children }) => (
-  <Capsule className="indent-6">{children}</Capsule>
+  <Capsule className="indent-6 font-thin text-sm text-justify p-6">
+    {children}
+  </Capsule>
 )
 
 DottedTab.Title = DottedTabTitle

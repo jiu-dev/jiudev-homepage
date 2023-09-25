@@ -18,9 +18,12 @@ const Home = () => {
               <Paragraph className="indent-4">
                 Matahi est un développeur full-stack basé à Bordeaux. En tant
                 qu&apos;autodidacte passionné, il se dédie à la création de
-                solutions technologiques innovantes. Sa curiosité naturelle
-                l&apos;amène à toujours chercher à résoudre des problèmes
-                complexes.
+                <a href="/portfolio" className="font-bold text-amber-400">
+                  {' '}
+                  solutions technologiques innovantes
+                </a>
+                . Sa curiosité naturelle l&apos;amène à toujours chercher à
+                résoudre des problèmes complexes.
               </Paragraph>
 
               <Heading>Bio</Heading>
@@ -31,12 +34,28 @@ const Home = () => {
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2019</span>
-                  Commence mon alternance chez Avanade France.
+                  Commence mon alternance chez
+                  <a
+                    href="https://www.avanade.com/fr-fr"
+                    target="_blank"
+                    className="font-bold text-amber-400"
+                  >
+                    {' '}
+                    Avanade France
+                  </a>
+                  .
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2022</span>
-                  Validation du cursus d&apos;ingénierie informatique à
-                  l&apos;EPSI Bordeaux.
+                  Validation du cursus d&apos;ingénierie informatique à l&apos;
+                  <a
+                    href="https://www.epsi.fr/campus/campus-de-bordeaux/"
+                    target="_blank"
+                    className="font-bold text-amber-400"
+                  >
+                    EPSI Bordeaux
+                  </a>
+                  .
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2023</span>

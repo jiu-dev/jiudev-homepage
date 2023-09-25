@@ -31,7 +31,7 @@ const UnderlinedLink = ({ href, path, target, children, active, ...props }) => {
         {children}
       </a>
       <motion.span
-        className="rounded absolute h-1 bg-current left-1/2 bottom-0 transform -translate-x-1/2"
+        className=" absolute h-1 bg-current left-1/2 bottom-0 transform -translate-x-1/2"
         variants={underlineVariants}
         transition={{ duration: 0.3 }}
       />

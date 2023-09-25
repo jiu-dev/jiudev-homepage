@@ -6,11 +6,7 @@ const Capsule = ({ children, ...props }) => {
       </div>
       <div className="bg-indigo-300/40 ">
         <div className="-ml-10 -mr-10 flex z-20">
-          <span
-            className={`font-thin text-sm p-6 text-justify ${props.className}`}
-          >
-            {children}
-          </span>
+          <span className={props.className}>{children}</span>
         </div>
       </div>
       <div className="w-10 self-stretch">
