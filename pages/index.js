@@ -34,7 +34,7 @@ const Home = () => {
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2019</span>
-                  Commence mon alternance chez
+                  Commence son alternance chez
                   <a
                     href="https://www.avanade.com/fr-fr"
                     target="_blank"
