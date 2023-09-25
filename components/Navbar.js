@@ -12,7 +12,7 @@ const Navbar = props => {
     <div className="flex items-center justify-between h-full w-full">
       <div className="flex items-center justify-start gap-6">
         <div className="w-14 h-14 p-2 border-4 border-white rounded-full bg-amber-500 ">
-          <PlanetIcon className="text-white w-10 sm:w-full" />
+          <PlanetIcon className="text-white w-full" />
         </div>
         <div className="flex flex-col">
           <a href="/" className="text-lg text-white sm:text-xl">
