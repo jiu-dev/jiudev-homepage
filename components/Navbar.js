@@ -1,9 +1,8 @@
 import { Menu, Transition } from '@headlessui/react'
 import StarsIcon from './icons/StarsIcon'
-import { Fragment, forwardRef } from 'react'
+import { Fragment } from 'react'
 import UnderlinedLink from './UnderlinedLink'
 import Link from 'next/link'
-import SaturneIcon from './icons/SaturneIcon'
 import HamburgerIcon from './icons/HamburgerIcon'
 import PlanetIcon from './icons/PlanetIcon'
 

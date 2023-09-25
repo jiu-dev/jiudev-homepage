@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import AstroSkill from '../AstroSkill'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Copyright from '../Copyright'
-import NavbarLinks from '../NavbarLinks'
 
 const Main = ({ children, router }) => {
   return (

@@ -1,12 +1,4 @@
 import NextLink from 'next/link'
-const navigation = [
-  { name: 'How I make my portfolio', href: '#', current: true },
-  { name: '', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Documents', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false }
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

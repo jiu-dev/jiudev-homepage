@@ -3,7 +3,6 @@ import Layout from '../components/layouts/article'
 import DottedTabMenu from '../components/DottedTabMenu'
 import DottedTab from '../components/DottedTab'
 import { projets } from '../lib/portfolio'
-import EarthIcon from '../components/icons/EarthIcon'
 import Galaxy from '../components/Galaxy'
 
 const Portfolio = () => {
