@@ -41,11 +41,11 @@ const Navbar = props => {
           </li>
         </ul>
       </div>
-      <div className="flex gap-4">
+      <div className="relative flex gap-4">
         <Menu as="div" className=" md:hidden block ">
           <div>
             <Menu.Button className="inline-flex w-10 h-10 justify-center border-4 border-white rounded-lg bg-indigo-300 p-1 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-              <HamburgerIcon />
+              <HamburgerIcon className="w-full" />
             </Menu.Button>
           </div>
           <Transition
