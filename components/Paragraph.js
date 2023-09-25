@@ -1,5 +1,7 @@
-const Paragraph = ({ children }) => (
-  <span className="font-thin text-sm text-justify">{children}</span>
+const Paragraph = ({ children, ...props }) => (
+  <span className={`font-thin text-sm text-justify ${props.className}`}>
+    {children}
+  </span>
 )
 
 export default Paragraph

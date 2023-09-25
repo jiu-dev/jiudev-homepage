@@ -1,38 +1,66 @@
-import Capsule from '../components/Capsule'
+import React, { useEffect, useState } from 'react'
 import Layout from '../components/layouts/article'
+import DottedTabMenu from '../components/DottedTabMenu'
+import DottedTab from '../components/DottedTab'
+import { projets } from '../lib/portfolio'
+import EarthIcon from '../components/icons/EarthIcon'
+import Galaxy from '../components/Galaxy'
 
-const Project = () => {
+const Portfolio = () => {
+  const [selectedTab, setSelectedTab] = useState(0)
+  const [currentProject, setCurrentProject] = useState(projets[0])
+
+  useEffect(() => {
+    setCurrentProject(projets[selectedTab])
+  }, [selectedTab])
+
   return (
     <Layout>
-      <div className="flex h-full">
-        <div className="w-1/3 h-full ">
-          <div className="flex flex-col items-center gap-6 mt-6">
-            <span>Oui</span>
-            <span>Oui</span>
+      <Galaxy />
+      <div className="flex z-10 relative justify-center h-full flex-col md:flex-row-reverse mx-10">
+        <div className="flex md:flex-none md:ml-10 md:mr-14">
+          <div className="ml-10 mb-6 md:hidden">
+            <h3 className=" text-3xl mb-3 mt-4 md:hidden">Projets</h3>
+
+            <div className="flex-none flex gap-6 ">
+              <DottedTabMenu
+                selectedTab={selectedTab}
+                setSelectedTab={setSelectedTab}
+                itemsByMenu={2}
+              >
+                {projets.map(projet => (
+                  <DottedTabMenu.Item>{projet.title}</DottedTabMenu.Item>
+                ))}
+              </DottedTabMenu>
+            </div>
+          </div>
+
+          <div className="hidden md:h-full md:flex md:items-center md:justify-center">
+            <DottedTabMenu
+              selectedTab={selectedTab}
+              setSelectedTab={setSelectedTab}
+            >
+              {projets.map(projet => (
+                <DottedTabMenu.Item>{projet.title}</DottedTabMenu.Item>
+              ))}
+            </DottedTabMenu>
           </div>
         </div>
-        <div className="w-2/3 h-full flex flex-col items-center justify-center">
-          <div>
-            <h3 className="text-4xl text-center mb-4">CvFlow</h3>
-            <Capsule>
-              CvFlow est une application conçue pour maximiser l'efficacité dans
-              la mise à jour des CV des collaborateurs. Cette application est
-              unique en ce qu'elle s'intègre à un écosystème complet
-              d'applications tierces, automatisant ainsi la mise à jour des CV.
-              Grâce à cette intégration, les utilisateurs bénéficient d'une
-              expérience optimisée, éliminant le besoin de mises à jour
-              manuelles répétées.
-            </Capsule>
-            <ul className="flex items-center justify-center mt-4">
-              <li>
-                <a>Voir plus</a>
-              </li>
-            </ul>
-          </div>
+        <div className="flex md:h-full md:items-center md:justify-center z-10">
+          <DottedTab>
+            <DottedTab.Title>{currentProject.title}</DottedTab.Title>
+            <DottedTab.Subtitle>
+              {currentProject.skills.map(skill => (
+                <DottedTab.Subtitle.Item>{skill}</DottedTab.Subtitle.Item>
+              ))}
+            </DottedTab.Subtitle>
+
+            <DottedTab.Body>{currentProject.body}</DottedTab.Body>
+          </DottedTab>
         </div>
       </div>
     </Layout>
   )
 }
 
-export default Project
+export default Portfolio

@@ -29,19 +29,21 @@
   }
 }
 
-.animate-underline::before {
-  content: '';
-  display: block;
-  width: 0;
-  height: 1px;
-  background: currentColor;
-  transition: width 0.3s ease-in-out;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+@keyframes sparkle {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
-
-.animate-underline:hover::before {
-  width: 100%;
+.galaxy .star {
+  width: 2px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  animation: sparkle 1.5s infinite;
 }

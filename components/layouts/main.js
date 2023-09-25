@@ -3,6 +3,7 @@ import AstroSkill from '../AstroSkill'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Copyright from '../Copyright'
+import NavbarLinks from '../NavbarLinks'
 
 const Main = ({ children, router }) => {
   return (
@@ -15,17 +16,19 @@ const Main = ({ children, router }) => {
         <title>Matahi Fareea - Portfolio</title>
       </Head>
 
-      <div className="flex items-center justify-center bg-firstplan w-full h-screen ">
-        <div className="w-4/5 h-4/5 border-4 border-white text-white rounded-3xl bg-white/20 backdrop-blur-lg overflow-hidden">
-          <div className="h-1/6 bg-indigo-300/40 whitespace-normal px-8">
+      <div className="flex items-center justify-center bg-firstplan w-full h-screen sm:p-14 md:p-20 xl:p-40 ">
+        <div className="h-full w-full flex flex-col text-white bg-white/20 backdrop-blur-lg overflow-hidden border-4 border-white rounded-3xl">
+          <div className="px-8 py-4 sm:h-1/6 bg-indigo-300/40 sm:px-8">
             <Navbar path={router.asPath} />
           </div>
-          <div className="h-4/6 px-8">{children}</div>
-          <div className="h-1/6 bg-indigo-300/40 px-8">
+          <div className="grow sm:h-4/6 overflow-hidden">{children}</div>
+          <div className="px-8 py-4 bg-indigo-300/40 sm:h-1/6 sm:px-8">
             <Footer />
           </div>
         </div>
-        <Copyright />
+        <div className="hidden bottom-6 sm:block sm:absolute">
+          <Copyright />
+        </div>
       </div>
     </main>
   )

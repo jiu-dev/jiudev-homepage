@@ -7,7 +7,7 @@ import Layout from '../components/layouts/article'
 const Home = () => {
   return (
     <Layout>
-      <div className="flex h-full">
+      <div className="flex h-full pl-8">
         <div className="w-1/2 h-full">
           <div className="flex items-center justify-center h-full">
             <Head>
@@ -15,7 +15,7 @@ const Home = () => {
             </Head>
             <div className="flex flex-col">
               <Heading>Portrait</Heading>
-              <Paragraph>
+              <Paragraph className="indent-4">
                 Matahi est un développeur full-stack basé à Bordeaux. En tant
                 qu'autodidacte passionné, il se dédie à la création de solutions
                 technologiques innovantes. Sa curiosité naturelle l'amène à
@@ -24,21 +24,21 @@ const Home = () => {
 
               <Heading>Bio</Heading>
               <Paragraph>
-                <div>
-                  <span className="font-bold mr-4">1998</span>
+                <div className="pl-[3.4rem] -indent-[3.4rem]">
+                  <span className="font-bold mr-[1.2rem]">1998</span>
                   Née à Papeete, Tahiti.
                 </div>
-                <div>
-                  <span className="font-bold mr-4">2019</span>
+                <div className="pl-[3.4rem] -indent-[3.4rem]">
+                  <span className="font-bold mr-[1.2rem]">2019</span>
                   Commence mon alternance chez Avanade France.
                 </div>
-                <div>
-                  <span className="font-bold mr-4">2022</span>
+                <div className="pl-[3.4rem] -indent-[3.4rem]">
+                  <span className="font-bold mr-[1.2rem]">2022</span>
                   Validation du cursus d'ingénierie informatique à l'EPSI
                   Bordeaux.
                 </div>
-                <div>
-                  <span className="font-bold mr-4">2023</span>
+                <div className="pl-[3.4rem] -indent-[3.4rem]">
+                  <span className="font-bold mr-[1.2rem]">2023</span>
                   Début de sa carrière de freelance.
                 </div>
               </Paragraph>
@@ -48,7 +48,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 h-full">
+        <div className="w-1/2 h-full pr-6">
           <AstroSkill></AstroSkill>
         </div>
       </div>
