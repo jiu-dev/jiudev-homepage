@@ -32,7 +32,7 @@ const DottedTabTitle = ({ children }) => (
 )
 
 const DottedTabSubtitle = ({ children }) => (
-  <ul className="flex gap-4 mt-4 justify-center font-thin text-sm">
+  <ul className="flex flex-wrap gap-4 mt-4 justify-center font-thin text-sm">
     {React.Children.map(children, (child, index) =>
       React.cloneElement(child, {
         isLast: index + 1 === React.Children.count(children)
