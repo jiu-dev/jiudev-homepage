@@ -14,7 +14,7 @@ const Layout = ({ children, title }) => {
       initial="hidden"
       animate="enter"
       exit="exit"
-      className="h-full"
+      className="h-full overflow-scroll no-scrollbar"
       variants={variants}
       transition={{ duration: 0.4, type: 'easeInOut' }}
       style={{ position: 'relative' }}

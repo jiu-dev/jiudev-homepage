@@ -7,9 +7,9 @@ import Layout from '../components/layouts/article'
 const Home = () => {
   return (
     <Layout>
-      <div className="flex h-full pl-8">
-        <div className="w-1/2 h-full">
-          <div className="flex items-center justify-center h-full">
+      <div className="flex h-full px-8">
+        <div className="w-full sm:w-1/2 h-full">
+          <div className="flex items-center justify-center h-full overflow-scroll no-scrollbar">
             <Head>
               <title>Portfolio - Matahi</title>
             </Head>
@@ -68,7 +68,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2 h-full pr-6">
+        <div className="hidden sm:block w-1/2 h-full pr-6">
           <AstroSkill></AstroSkill>
         </div>
       </div>

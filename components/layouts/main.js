@@ -23,7 +23,7 @@ const Main = ({ children, router }) => {
           <div className="px-8 py-4 sm:h-1/6 bg-indigo-300/40 sm:px-8">
             <Navbar path={router.asPath} />
           </div>
-          <div className="grow relative sm:h-4/6 overflow-hidden">
+          <div className="grow relative sm:h-4/6 overflow-scroll no-scrollbar">
             {children}
           </div>
           <div className="px-8 py-4 bg-indigo-300/40 sm:h-1/6 sm:px-8">
