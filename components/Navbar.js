@@ -5,19 +5,21 @@ import UnderlinedLink from './UnderlinedLink'
 import Link from 'next/link'
 import HamburgerIcon from './icons/HamburgerIcon'
 import PlanetIcon from './icons/PlanetIcon'
+import { useDarkMode } from '../contexts/DarkModeProvider'
 
 const Navbar = props => {
   const { path } = props
+  const { toggleDarkMode, isDarkMode } = useDarkMode()
   return (
     <div className="flex items-center justify-between h-full w-full">
       <div className="flex items-center justify-start gap-6">
-        <div className="flex-none w-14 h-14 p-2 border-4 border-white rounded-full bg-amber-500 ">
-          <PlanetIcon className="text-white h-full w-full" />
+        <div className="flex-none w-14 h-14 p-2 border-4 border-white dark:border-white rounded-full bg-amber-500 dark:bg-amber-500">
+          <PlanetIcon className="text-white dark:text-white h-full w-full" />
         </div>
         <div className="flex flex-col">
-          <a href="/" className="text-lg text-white sm:text-xl">
+          <Link href="/" className="text-lg sm:text-xl">
             Fareea Matahi
-          </a>
+          </Link>
 
           <span className="font-thin text-sm">
             React <span className="self-center">&bull;</span> NodeJS{' '}
@@ -106,8 +108,17 @@ const Navbar = props => {
             </Menu.Items>
           </Transition>
         </Menu>
-        <div className="inline-block p-1 border-4 border-white bg-amber-500 rounded-lg w-10 h-10 ">
-          <StarsIcon className="w-full text-white" />
+        <div
+          className={`inline-block p-1 border-4 border-white dark:border-white ${
+            isDarkMode
+              ? 'bg-amber-500 hover:bg-amber-400'
+              : 'bg-amber-500 hover:bg-amber-400'
+          } cursor-pointer rounded-lg w-10 h-10`}
+        >
+          <StarsIcon
+            className="w-full text-white dark:text-white"
+            onClick={toggleDarkMode}
+          />
         </div>
       </div>
     </div>

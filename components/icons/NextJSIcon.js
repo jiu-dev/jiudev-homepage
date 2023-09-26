@@ -2,7 +2,7 @@ function NextJSIcon(props) {
   return (
     <svg
       fill="transparent"
-      stroke="white"
+      stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}

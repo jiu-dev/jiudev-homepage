@@ -54,7 +54,7 @@ const Portfolio = () => {
               {currentProject.skills.map((skill, index) => (
                 <DottedTab.Subtitle.Item key={index}>
                   <div className="flex items-center gap-2">
-                    <span className="w-4 h-4 hidden md:inline text-white">
+                    <span className="w-4 h-4 hidden md:inline text-black dark:text-white">
                       {skill.icon}
                     </span>
                     <span>{skill.title}</span>

@@ -16,7 +16,7 @@ const UnderlinedLink = ({ href, path, target, children, active, ...props }) => {
 
   return (
     <motion.span
-      className="relative py-2 hover:text-white"
+      className="relative py-2 hover:text-white dark:hover:text-white"
       initial={isActive() ? 'active' : 'rest'}
       animate={isActive() ? 'active' : 'rest'}
       whileHover="hover"

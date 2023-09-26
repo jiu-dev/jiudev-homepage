@@ -3,25 +3,25 @@ import AstroSkill from '../components/AstroSkill'
 import Paragraph from '../components/Paragraph'
 import Heading from '../components/Heading'
 import Layout from '../components/layouts/article'
-
+import Link from 'next/link'
 const Home = () => {
   return (
     <Layout>
-      <div className="flex h-full px-8">
-        <div className="w-full sm:w-1/2 h-full">
-          <div className="flex items-center justify-center h-full overflow-scroll no-scrollbar">
+      <div className="flex h-full px-4 sm:pr-0 sm:pl-8">
+        <div className="w-full h-full flex items-center relative sm:w-1/2 z-10">
+          <div className="rounded-3xl p-4 sm:p-0 overflow-scroll no-scrollbar sm:flex sm:items-center sm:justify-center sm:h-full">
             <Head>
               <title>Portfolio - Matahi</title>
             </Head>
-            <div className="flex flex-col">
+            <div className="flex flex-col z-20">
               <Heading>Portrait</Heading>
               <Paragraph className="indent-4">
                 Matahi est un développeur full-stack basé à Bordeaux. En tant
                 qu&apos;autodidacte passionné, il se dédie à la création de
-                <a href="/portfolio" className="font-bold text-amber-400">
+                <Link href="/portfolio" className="link">
                   {' '}
                   solutions technologiques innovantes
-                </a>
+                </Link>
                 . Sa curiosité naturelle l&apos;amène à toujours chercher à
                 résoudre des problèmes complexes.
               </Paragraph>
@@ -38,7 +38,7 @@ const Home = () => {
                   <a
                     href="https://www.avanade.com/fr-fr"
                     target="_blank"
-                    className="font-bold text-amber-400"
+                    className="link"
                   >
                     {' '}
                     Avanade France
@@ -51,7 +51,7 @@ const Home = () => {
                   <a
                     href="https://www.epsi.fr/campus/campus-de-bordeaux/"
                     target="_blank"
-                    className="font-bold text-amber-400"
+                    className="link"
                   >
                     EPSI Bordeaux
                   </a>
@@ -68,7 +68,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="hidden sm:block w-1/2 h-full pr-6">
+        <div className=" absolute bottom-0 right-0 pb-5 pr-5 sm:p-0 sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:w-1/2 sm:h-full overflow-hidden">
           <AstroSkill></AstroSkill>
         </div>
       </div>

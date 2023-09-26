@@ -1,5 +1,5 @@
 const Heading = ({ children }) => (
-  <h3 className="text-lg  mb-3 text underline underline-offset-8 decoration-4 text-white">
+  <h3 className="text-lg mb-3 text underline underline-offset-8 decoration-4">
     {children}
   </h3>
 )
