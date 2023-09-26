@@ -30,7 +30,7 @@ const Home = () => {
               <Paragraph>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">1998</span>
-                  Née à Papeete, Tahiti.
+                  Né à Papeete, Tahiti.
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2019</span>

@@ -6,6 +6,7 @@ import Link from 'next/link'
 import HamburgerIcon from './icons/HamburgerIcon'
 import PlanetIcon from './icons/PlanetIcon'
 import { useDarkMode } from '../contexts/DarkModeProvider'
+import Capsule from './Capsule'
 
 const Navbar = props => {
   const { path } = props
@@ -48,7 +49,7 @@ const Navbar = props => {
           <div className="border-4 overflow-hidden border-white rounded-lg">
             <Menu.Button
               as="div"
-              className="w-8 h-8 bg-indigo-300 p-1 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              className="w-8 h-8 dark:bg-amber-500 bg-indigo-300 p-1 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               <HamburgerIcon className="w-full h-full" />
             </Menu.Button>
@@ -62,49 +63,40 @@ const Navbar = props => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute flex items-stretch z-50 right-4 mt-2 w-56 origin-top-left rounded-3xl bg-indigo-300/40 shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
-              <div className="w-10 self-stretch">
-                <div className="w-10 h-full bg-indigo-300/40 border-l-4 border-y-4 border-white rounded-tl-3xl rounded-bl-3xl"></div>
-              </div>
-              <div className="bg-indigo-300/40">
-                <div className="-ml-10 -mr-10 flex z-10 w-56">
-                  <span
-                    className={`block w-full text-sm p-2 text-justify ${props.className}`}
-                  >
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/"
-                          className={`${
-                            active
-                              ? 'bg-indigo-300/40 text-white'
-                              : 'text-white'
-                          } group pl-10  flex w-full items-center rounded-t-2xl rounded-b-md px-2 py-2 text-sm`}
-                        >
-                          Accueil
-                        </Link>
-                      )}
-                    </Menu.Item>
-                    <Menu.Item>
-                      {({ active }) => (
-                        <Link
-                          href="/portfolio"
-                          className={`${
-                            active
-                              ? 'bg-indigo-300/40 text-white'
-                              : 'text-white'
-                          } group pl-10 flex w-full items-center rounded-b-2xl rounded-t-md px-2 py-2 text-sm`}
-                        >
-                          Portfolio
-                        </Link>
-                      )}
-                    </Menu.Item>
-                  </span>
-                </div>
-              </div>
-              <div className="w-10 self-stretch">
-                <div className="w-10 h-full bg-indigo-300/40 border-r-4 border-y-4 border-white rounded-tr-3xl rounded-br-3xl"></div>
-              </div>
+            <Menu.Items className="absolute flex items-stretch z-50 right-4 mt-2 w-56 origin-top-left rounded-3xl shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
+              <Capsule
+                className=" w-full text-sm p-2 text-justify"
+                centerClassName="w-56"
+              >
+                <Menu.Item>
+                  {({ active }) => (
+                    <Link
+                      href="/"
+                      className={`${
+                        active
+                          ? 'dark:bg-amber-500/40 bg-indigo-300/40 text-white'
+                          : 'text-white'
+                      } group pl-10  flex w-full items-center rounded-t-2xl rounded-b-md px-2 py-2 text-sm`}
+                    >
+                      Accueil
+                    </Link>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <Link
+                      href="/portfolio"
+                      className={`${
+                        active
+                          ? 'dark:bg-amber-500/40 bg-indigo-300/40 text-white'
+                          : 'text-white'
+                      } group pl-10 flex w-full items-center rounded-b-2xl rounded-t-md px-2 py-2 text-sm`}
+                    >
+                      Portfolio
+                    </Link>
+                  )}
+                </Menu.Item>
+              </Capsule>
             </Menu.Items>
           </Transition>
         </Menu>

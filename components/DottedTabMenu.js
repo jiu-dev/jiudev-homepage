@@ -46,22 +46,22 @@ DottedTabMenu.Item = props => (
   <>
     <div className="relative flex gap-6">
       {!props.isLast && (
-        <div className="absolute w-3 h-full bg-black dark:bg-white top-3 left-3 -translate-x-1/2"></div>
+        <div className="absolute w-3 h-full dark:bg-black bg-white top-3 left-3 -translate-x-1/2"></div>
       )}
       {!props.isLast && (
-        <div className="absolute w-1 h-full bg-amber-500 dark:bg-indigo-300 z-20 top-3 left-3 -translate-x-1/2"></div>
+        <div className="absolute w-1 h-full dark:bg-amber-500 bg-indigo-300 z-20 top-3 left-3 -translate-x-1/2"></div>
       )}
       <div className="relative flex-none w-6 h-6">
-        <div className="absolute w-6 h-6 bg-black dark:bg-white rounded-full z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute w-6 h-6 dark:bg-black bg-white rounded-full z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div
-          className={`absolute w-4 h-4 bg-amber-500 dark:bg-indigo-300 rounded-full z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
+          className={`absolute w-4 h-4 dark:bg-amber-500 bg-indigo-300 rounded-full z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${
             !props.isActive ? 'cursor-pointer' : ''
           }`}
           onClick={props.onClick}
         ></div>
 
         {props.isActive && (
-          <div className="absolute w-2 h-2 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black dark:bg-white z-20"></div>
+          <div className="absolute w-2 h-2 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 dark:bg-black bg-white z-20"></div>
         )}
       </div>
       <div className={`relative opacity-0 font-bold`}>{props.children}</div>
@@ -77,8 +77,8 @@ DottedTabMenu.Item = props => (
     </div>
     {!props.isLast && (
       <div className="relative w-6 h-6">
-        <div className="absolute w-3 h-8 bg-black dark:bg-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
-        <div className="absolute w-1 h-8 bg-amber-500 dark:bg-indigo-300 z-20 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
+        <div className="absolute w-3 h-8 dark:bg-black bg-white top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
+        <div className="absolute w-1 h-8 dark:bg-amber-500 bg-indigo-300 z-20 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
       </div>
     )}
   </>
