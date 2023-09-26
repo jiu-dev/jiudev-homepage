@@ -3,6 +3,7 @@ import Layout from '../components/layouts/article'
 import DottedTabMenu from '../components/DottedTabMenu'
 import DottedTab from '../components/DottedTab'
 import { projets } from '../lib/portfolio'
+import CustomBlockContent from '../components/CustomBlockContent'
 
 const Portfolio = () => {
   const [selectedTab, setSelectedTab] = useState(0)
@@ -54,7 +55,7 @@ const Portfolio = () => {
               {currentProject.skills.map((skill, index) => (
                 <DottedTab.Subtitle.Item key={index}>
                   <div className="flex items-center gap-2">
-                    <span className="w-4 h-4 hidden md:inline ">
+                    <span className="w-4 h-4 hidden md:inline">
                       {skill.icon}
                     </span>
                     <span>{skill.title}</span>
@@ -63,7 +64,9 @@ const Portfolio = () => {
               ))}
             </DottedTab.Subtitle>
 
-            <DottedTab.Body>{currentProject.body}</DottedTab.Body>
+            <DottedTab.Body>
+              <CustomBlockContent blocks={currentProject.body} />
+            </DottedTab.Body>
           </DottedTab>
         </div>
       </div>

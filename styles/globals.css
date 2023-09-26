@@ -4,7 +4,7 @@
 @tailwind utilities;
 @layer components {
   .link {
-    @apply font-bold text-amber-400 dark:text-amber-400;
+    @apply font-bold text-amber-400 underline underline-offset-2 dark:text-amber-400;
   }
 }
 

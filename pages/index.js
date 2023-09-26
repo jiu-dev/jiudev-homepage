@@ -16,10 +16,10 @@ const Home = () => {
             <div className="flex flex-col z-20">
               <Heading>Portrait</Heading>
               <Paragraph className="indent-4">
-                Matahi est un développeur full-stack basé à Bordeaux. En tant
-                qu&apos;autodidacte passionné, il se dédie à la création de
+                <span className="text-amber-400 font-bold">Matahi</span> est un
+                développeur full-stack basé à Bordeaux. En tant
+                qu&apos;autodidacte passionné, il se dédie à la création de{' '}
                 <Link href="/portfolio" className="link">
-                  {' '}
                   solutions technologiques innovantes
                 </Link>
                 . Sa curiosité naturelle l&apos;amène à toujours chercher à
@@ -34,13 +34,12 @@ const Home = () => {
                 </div>
                 <div className="pl-[3.4rem] -indent-[3.4rem]">
                   <span className="font-bold mr-[1.2rem]">2019</span>
-                  Commence son alternance chez
+                  Commence son alternance chez{' '}
                   <a
                     href="https://www.avanade.com/fr-fr"
                     target="_blank"
                     className="link"
                   >
-                    {' '}
                     Avanade France
                   </a>
                   .
