@@ -5,7 +5,7 @@ import DottedTab from '../components/DottedTab'
 import { projets } from '../lib/portfolio'
 import CustomBlockContent from '../components/CustomBlockContent'
 
-const Portfolio = () => {
+const Experiences = () => {
   const [selectedTab, setSelectedTab] = useState(0)
   const [currentProject, setCurrentProject] = useState(projets[0])
 
@@ -74,4 +74,4 @@ const Portfolio = () => {
   )
 }
 
-export default Portfolio
+export default Experiences

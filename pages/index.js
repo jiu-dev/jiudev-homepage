@@ -19,7 +19,7 @@ const Home = () => {
                 <span className="text-amber-400 font-bold">Matahi</span> est un
                 développeur full-stack basé à Bordeaux. En tant
                 qu&apos;autodidacte passionné, il se dédie à la création de{' '}
-                <Link href="/portfolio" className="link">
+                <Link href="/experiences" className="link">
                   solutions technologiques innovantes
                 </Link>
                 . Sa curiosité naturelle l&apos;amène à toujours chercher à

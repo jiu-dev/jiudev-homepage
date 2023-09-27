@@ -12,9 +12,9 @@ const Navbar = props => {
   const { path } = props
   const { toggleDarkMode, isDarkMode } = useDarkMode()
   return (
-    <div className="flex items-center justify-between h-full w-full">
-      <div className="flex items-center justify-start gap-6">
-        <div className="flex-none w-14 h-14 p-2 border-4 border-white dark:border-white rounded-full bg-amber-500 dark:bg-amber-500">
+    <div className="flex items-center p-0 justify-between h-full w-full">
+      <div className="flex items-center gap-6">
+        <div className="flex-none w-12 h-12 p-2 border-4 border-white dark:border-white rounded-full bg-amber-500 dark:bg-amber-500">
           <PlanetIcon className="text-white dark:text-white h-full w-full" />
         </div>
         <div className="flex flex-col">
@@ -30,7 +30,7 @@ const Navbar = props => {
       </div>
 
       <div className="hidden md:block">
-        <ul className="inline-flex gap-4">
+        <ul className="inline-flex gap-4 text-sm lg:text-base">
           <li>
             <UnderlinedLink href="/" path={path}>
               Accueil
@@ -38,8 +38,15 @@ const Navbar = props => {
           </li>
           <span className="self-center">&bull;</span>
           <li>
-            <UnderlinedLink href="/portfolio" path={path}>
-              Portfolio
+            <UnderlinedLink href="/skills" path={path}>
+              Compétences
+            </UnderlinedLink>
+          </li>
+
+          <span className="self-center">&bull;</span>
+          <li>
+            <UnderlinedLink href="/experiences" path={path}>
+              Projets
             </UnderlinedLink>
           </li>
         </ul>
@@ -85,14 +92,28 @@ const Navbar = props => {
                 <Menu.Item>
                   {({ active }) => (
                     <Link
-                      href="/portfolio"
+                      href="/skills"
+                      className={`${
+                        active
+                          ? 'dark:bg-amber-500/40 bg-indigo-300/40 text-white'
+                          : 'text-white'
+                      } group pl-10 flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                    >
+                      Compétences
+                    </Link>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <Link
+                      href="/experiences"
                       className={`${
                         active
                           ? 'dark:bg-amber-500/40 bg-indigo-300/40 text-white'
                           : 'text-white'
                       } group pl-10 flex w-full items-center rounded-b-2xl rounded-t-md px-2 py-2 text-sm`}
                     >
-                      Portfolio
+                      Projets
                     </Link>
                   )}
                 </Menu.Item>
