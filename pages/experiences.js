@@ -18,7 +18,7 @@ const Experiences = () => {
       <div className="flex z-10 relative justify-center h-full flex-col md:flex-row-reverse mx-10">
         <div className="flex md:flex-none md:ml-10 md:mr-14">
           <div className="ml-10 mb-6 md:hidden">
-            <h3 className=" text-3xl mb-3 mt-4 md:hidden">Projets</h3>
+            <h3 className=" text-3xl mb-6 mt-4 md:hidden">Projets</h3>
 
             <div className="flex-none flex gap-6 ">
               <DottedTabMenu

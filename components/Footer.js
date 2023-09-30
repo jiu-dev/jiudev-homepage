@@ -1,4 +1,5 @@
 import Copyright from './Copyright'
+import DownloadResume from './DownloadResume'
 import GithubIcon from './icons/GithubIcon'
 import LinkedInIcon from './icons/LinkedInIcon'
 import MaltIcon from './icons/MaltIcon'
@@ -18,6 +19,12 @@ const Footer = () => {
         >
           <LinkedInIcon className="w-10 h-10 dark:hover:text-amber-500 hover:text-indigo-300" />
         </a>
+        <div className="block md:hidden">
+          <DownloadResume />
+        </div>
+      </div>
+      <div className="absolute hidden md:block right-10 dark:hover:text-amber-500 hover:text-indigo-300">
+        <DownloadResume />
       </div>
       <div className="text-xs sm:hidden">
         <Copyright></Copyright>

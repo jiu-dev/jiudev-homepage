@@ -7,6 +7,7 @@ import NodeJSIcon from '../components/icons/NodeJSIcon'
 import NextJSIcon from '../components/icons/NextJSIcon'
 import TailwindIcon from '../components/icons/TailwindIcon'
 import MongoDBIcon from '../components/icons/MongoDBIcon'
+import Heading from '../components/Heading'
 
 const Skills = () => {
   const renderAstroMeditation = () => (
@@ -40,15 +41,18 @@ const Skills = () => {
   return (
     <Layout>
       <div className="h-full w-full flex">
-        <div className="flex items-start lg:items-center w-full sm:w-1/2 lg:w-full h-full flex-col lg:flex-row">
+        <div className="flex justify-center lg:items-center w-full sm:w-1/2 lg:w-full h-full flex-col lg:flex-row">
           <div className="flex-none w-full lg:w-auto lg:grow px-8 pt-8 pb-4 lg:p-8 flex flex-col gap-4">
+            <span className="text-3xl mb-4 text-center sm:hidden block">
+              Mes compétences
+            </span>
             <Skill className="" level={SKILL_LEVELS.EXPERT}>
               React
             </Skill>
             <Skill className="" level={SKILL_LEVELS.INTERMEDIATE}>
               NextJS
             </Skill>
-            <Skill className="" level={SKILL_LEVELS.EXPERT}>
+            <Skill className="" level={SKILL_LEVELS.ADVANCED}>
               NodeJS
             </Skill>
           </div>

@@ -14,6 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "@progress/kendo-file-saver": "^1.1.1",
+    "@react-pdf/renderer": "^3.1.12",
     "@sanity/block-content-to-react": "^3.0.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",

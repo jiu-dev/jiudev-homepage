@@ -9,7 +9,10 @@ const Home = () => {
     <Layout>
       <div className="flex h-full px-4 sm:pr-0 sm:pl-8">
         <div className="w-full h-full flex items-center relative sm:w-1/2 z-10">
-          <div className="rounded-3xl p-4 sm:p-0 overflow-scroll no-scrollbar sm:flex sm:items-center sm:justify-center sm:h-full">
+          <div className=" overflow-scroll no-scrollbar sm:flex sm:items-center sm:justify-center sm:h-full">
+            <span className="text-3xl mb-4 text-center sm:hidden block">
+              Fareea Matahi
+            </span>
             <Head>
               <title>Portfolio - Matahi</title>
             </Head>

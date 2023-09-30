@@ -17,33 +17,14 @@
 
 @keyframes floating {
   0% {
-    transform: translate(0, 0px);
+    transform: translate3d(0, 0px, 0);
   }
   50% {
-    transform: translate(0, 15px);
+    transform: translate3d(0, 15px, 0);
   }
   100% {
-    transform: translate(0, -0px);
+    transform: translate3d(0, -0px, 0);
   }
-}
-
-@keyframes sparkle {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
-.galaxy .star {
-  width: 2px;
-  height: 2px;
-  top: 50%;
-  left: 50%;
-  animation: sparkle 1.5s infinite;
 }
 
 .no-scrollbar::-webkit-scrollbar {

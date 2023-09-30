@@ -24,7 +24,7 @@ const Skill = ({ children, ...props }) => {
   return (
     <div className={props.className}>
       <div className="mb-1">
-        <span className="text">{children}</span>
+        <span className="">{children}</span>
         <span className="self-center px-2">&bull;</span>
         <span className="font-thin">{label}</span>
       </div>

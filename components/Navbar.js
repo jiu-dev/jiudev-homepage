@@ -14,9 +14,11 @@ const Navbar = props => {
   return (
     <div className="flex items-center p-0 justify-between h-full w-full">
       <div className="flex items-center gap-6">
-        <div className="flex-none w-12 h-12 p-2 border-4 border-white dark:border-white rounded-full bg-amber-500 dark:bg-amber-500">
-          <PlanetIcon className="text-white dark:text-white h-full w-full" />
-        </div>
+        <Link href="/">
+          <div className="flex-none w-12 h-12 p-2 border-4 border-white dark:border-white rounded-full bg-amber-500 dark:bg-amber-500">
+            <PlanetIcon className="text-white dark:text-white h-full w-full" />
+          </div>
+        </Link>
         <div className="flex flex-col">
           <Link href="/" className="text-lg sm:text-xl">
             Fareea Matahi
@@ -127,11 +129,9 @@ const Navbar = props => {
               ? 'bg-amber-500 hover:bg-amber-400'
               : 'bg-amber-500 hover:bg-amber-400'
           } cursor-pointer rounded-lg w-10 h-10`}
+          onClick={toggleDarkMode}
         >
-          <StarsIcon
-            className="w-full text-white dark:text-white"
-            onClick={toggleDarkMode}
-          />
+          <StarsIcon className="w-full text-white dark:text-white" />
         </div>
       </div>
     </div>
