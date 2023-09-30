@@ -1,5 +1,4 @@
 import React from 'react'
-import { PDFViewer } from '@react-pdf/renderer'
 import MyResume from '../components/MyResume'
 import dynamic from 'next/dynamic'
 import { resume } from '../lib/resume'

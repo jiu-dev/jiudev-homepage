@@ -7,7 +7,6 @@ import NodeJSIcon from '../components/icons/NodeJSIcon'
 import NextJSIcon from '../components/icons/NextJSIcon'
 import TailwindIcon from '../components/icons/TailwindIcon'
 import MongoDBIcon from '../components/icons/MongoDBIcon'
-import Heading from '../components/Heading'
 
 const Skills = () => {
   const renderAstroMeditation = () => (
