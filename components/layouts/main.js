@@ -9,6 +9,22 @@ import Image from 'next/image'
 const Main = ({ children, router }) => {
   const { isDarkMode } = useDarkMode()
   const backgroundImage = isDarkMode ? '/images/mars6.jpg' : '/images/space.jpg'
+  const messageBubble = [
+    { type: 'text', value: "Bonjour ! Je m'appelle Matahi, bienvenue sur " },
+    {
+      type: 'nextLink',
+      value: 'mon Portfolio',
+      url: '/'
+    },
+    { type: 'text', value: ', accéder au ' },
+    {
+      type: 'link',
+      value: 'code source',
+      url: 'https://github.com/jiu-dev/jiudev-homepage'
+    },
+    { type: 'text', value: ' !' }
+  ]
+
   return (
     <main className="font-mplus-rounded font-bold">
       <Head>
@@ -46,7 +62,7 @@ const Main = ({ children, router }) => {
       />
       <div className="flex items-center justify-center dark:text-white text-white w-full h-screen sm:p-14 md:p-20 xl:p-32 ">
         <span className="absolute hidden whitespace-nowrap sm:block sm:top-7 md:top-10 xl:top-20  left-1/2 -translate-y-1/2 -translate-x-1/2">
-          <MessageBubble message="Bonjour ! Je m'appelle Matahi, bienvenue sur mon Portfolio :)" />
+          <MessageBubble message={messageBubble} />
         </span>
         <div className="h-full w-full flex flex-col dark:bg-black/20 bg-white/20 backdrop-blur-lg overflow-hidden border-4 dark:border-black border-white rounded-3xl">
           <div className="px-8 py-2 sm:h-1/6 dark:bg-black/40 bg-indigo-300/40 sm:py-4">
