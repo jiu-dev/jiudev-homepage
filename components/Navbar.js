@@ -8,17 +8,20 @@ import PlanetIcon from './icons/PlanetIcon'
 import { useDarkMode } from '../contexts/DarkModeProvider'
 import Capsule from './Capsule'
 
+// Navbar component
 const Navbar = props => {
   const { path } = props
   const { toggleDarkMode, isDarkMode } = useDarkMode()
   return (
     <div className="flex items-center p-0 justify-between h-full w-full">
       <div className="flex items-center gap-6">
+        {/* Link wrapping the logo that redirects to the homepage */}
         <Link href="/">
           <div className="flex-none w-12 h-12 p-2 border-4 border-white dark:border-white rounded-full bg-amber-500 dark:bg-amber-500">
             <PlanetIcon className="text-white dark:text-white h-full w-full" />
           </div>
         </Link>
+        {/* Navbar title */}
         <div className="flex flex-col">
           <Link href="/" className="text-lg sm:text-xl">
             Fareea Matahi
@@ -30,7 +33,7 @@ const Navbar = props => {
           </span>
         </div>
       </div>
-
+      {/* Main navigation links displayed on larger screens */}
       <div className="hidden md:block">
         <ul className="inline-flex gap-4 text-sm lg:text-base">
           <li>
@@ -53,6 +56,7 @@ const Navbar = props => {
           </li>
         </ul>
       </div>
+      {/* Hamburger menu for mobile views and the dark mode toggle button */}
       <div>
         <Menu as="div" className="md:hidden inline-block mr-2">
           <div className="border-4 overflow-hidden border-white rounded-lg">
@@ -123,6 +127,7 @@ const Navbar = props => {
             </Menu.Items>
           </Transition>
         </Menu>
+        {/* Dark mode toggle button */}
         <div
           className={`inline-block p-1 border-4 border-white dark:border-white ${
             isDarkMode

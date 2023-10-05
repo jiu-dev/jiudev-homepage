@@ -9,6 +9,7 @@ import TailwindIcon from '../components/icons/TailwindIcon'
 import MongoDBIcon from '../components/icons/MongoDBIcon'
 
 const Skills = () => {
+  // Helper function to render the "astro-meditation" image surrounded by skill icons
   const renderAstroMeditation = () => (
     <>
       <div className="relative w-[136px] h-32 floating">
@@ -39,8 +40,11 @@ const Skills = () => {
   )
   return (
     <Layout>
+      {/* Main container */}
       <div className="h-full w-full flex">
+        {/* Skills container */}
         <div className="flex justify-center lg:items-center w-full sm:w-1/2 lg:w-full h-full flex-col lg:flex-row">
+          {/* Skill sets displayed on the left side */}
           <div className="flex-none w-full lg:w-auto lg:grow px-8 pt-8 pb-4 lg:p-8 flex flex-col gap-4">
             <span className="text-3xl mb-4 text-center sm:hidden block">
               Mes compétences
@@ -55,9 +59,11 @@ const Skills = () => {
               NodeJS
             </Skill>
           </div>
+          {/* Rendered image only on larger screens */}
           <div className="hidden lg:flex lg:order-none flex-none items-center justify-center w-64 relative">
             {renderAstroMeditation()}
           </div>
+          {/* Skill sets displayed on the right side */}
           <div className="flex-none w-full lg:w-auto lg:grow px-8 pt-0 pb-8 lg:p-8 flex flex-col gap-4">
             <Skill className="" level={SKILL_LEVELS.EXPERT}>
               Tailwind
@@ -70,6 +76,7 @@ const Skills = () => {
             </Skill>
           </div>
         </div>
+        {/* Rendered image on smaller screens */}
         <div className="hidden sm:flex lg:hidden w-1/2 items-center justify-center">
           {renderAstroMeditation()}
         </div>

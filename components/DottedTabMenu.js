@@ -1,11 +1,13 @@
 import React from 'react'
 
+// The DottedTabMenu component represents a menu with interactive tab items.
 const DottedTabMenu = ({
   children,
   selectedTab,
   setSelectedTab,
   itemsByMenu
 }) => {
+  // This function splits the provided array (children) into chunks of a specified size.
   const splitArrayInChunks = chunkSize => {
     let result = []
     for (let i = 0; i < React.Children.count(children); i += chunkSize) {
@@ -14,6 +16,7 @@ const DottedTabMenu = ({
     return result
   }
 
+  // This function maps over the provided chunks and renders individual tab items.
   const renderDottedTabMenu = c => {
     return c.map((item, byTwoIndex) => {
       const chunkSize = item.length
@@ -42,6 +45,7 @@ const DottedTabMenu = ({
   )
 }
 
+// Represents an individual menu item with a unique visual style.
 DottedTabMenu.Item = props => (
   <>
     <div className="relative flex gap-6">

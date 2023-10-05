@@ -1,7 +1,9 @@
 import React from 'react'
 import { Page, Text, View, Document, Image } from '@react-pdf/renderer'
 import { styles } from '../styles/components/MyResumeStyles'
+import { BlockContentPDF } from './BlockContent'
 
+// A component to display contact information with an icon.
 const ContactInfo = ({ children, icon }) => (
   <View style={styles.contactInfo}>
     {icon}
@@ -9,6 +11,7 @@ const ContactInfo = ({ children, icon }) => (
   </View>
 )
 
+// Header component for different sections of the resume.
 const HeaderView = ({ children, icon, isDark }) => (
   <View style={styles.header}>
     {isDark && <View style={styles.iconDecoration2}></View>}
@@ -31,17 +34,22 @@ const HeaderView = ({ children, icon, isDark }) => (
   </View>
 )
 
-const DescriptionItem = ({ children }) => (
-  <View style={styles.descriptionItem}>
-    <Text style={styles.bullet}></Text>
-    <Text>{children}</Text>
-  </View>
-)
+// Component for displaying descriptions with a bullet point.
+const DescriptionItem = ({ children }) => {
+  return (
+    <View style={styles.descriptionItem}>
+      <Text style={styles.bullet}></Text>
+      <BlockContentPDF blocks={children} />
+    </View>
+  )
+}
 
+// The main resume component.
 const MyResume = ({ resume }) => (
   <Document>
     <Page size="A4">
       <View style={styles.page}>
+        {/* Resume Header: Contains profile picture, name, role, and summary. */}
         <View style={styles.resumeHead}>
           <View style={styles.left}>
             <View style={styles.profilPicRing}>
@@ -57,9 +65,12 @@ const MyResume = ({ resume }) => (
           </View>
         </View>
 
+        {/* Resume Body: Contains contact details, skills, languages, experiences, and education.*/}
         <View style={styles.resumeBody}>
+          {/* Left section: Contains contact details, skills, and languages.*/}
           <View style={styles.left}>
             <View style={{ display: 'flex', margin: 10, gap: 10 }}>
+              {/* Contact details section */}
               <View style={{ ...styles.leftContent, gap: 10 }}>
                 <ContactInfo
                   icon={
@@ -114,6 +125,7 @@ const MyResume = ({ resume }) => (
                 </ContactInfo>
               </View>
 
+              {/* Skills section */}
               <View style={styles.leftContent}>
                 <HeaderView
                   icon={
@@ -135,6 +147,8 @@ const MyResume = ({ resume }) => (
                   </View>
                 </View>
               </View>
+
+              {/* Languages section */}
               <View style={styles.leftContent}>
                 <HeaderView
                   icon={
@@ -158,7 +172,9 @@ const MyResume = ({ resume }) => (
             </View>
           </View>
 
+          {/* Right section : Contains work experience and education.*/}
           <View style={{ ...styles.right, gap: 20 }}>
+            {/* Work Experiences section */}
             <View>
               <HeaderView
                 isDark
@@ -176,7 +192,7 @@ const MyResume = ({ resume }) => (
               </HeaderView>
 
               <View style={{ ...styles.sectionBody, gap: 10 }}>
-                {resume.experience.map(job => (
+                {resume.experiences.map(job => (
                   <View key={job.duration}>
                     <Text style={styles.jobTitle}>{job.role}</Text>
                     <Text style={styles.jobCompany}>{job.company}</Text>
@@ -200,6 +216,7 @@ const MyResume = ({ resume }) => (
               </View>
             </View>
 
+            {/* Education section */}
             <View>
               <HeaderView
                 isDark

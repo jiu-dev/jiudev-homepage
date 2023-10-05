@@ -4,18 +4,23 @@ import Paragraph from '../components/Paragraph'
 import Heading from '../components/Heading'
 import Layout from '../components/layouts/article'
 import Link from 'next/link'
+
 const Home = () => {
   return (
     <Layout>
+      {/* Main content wrapper */}
       <div className="flex h-full px-4 sm:pr-0 sm:pl-8">
+        {/* Left side content */}
         <div className="w-full h-full flex items-center relative sm:w-1/2 z-10">
           <div className=" overflow-scroll no-scrollbar sm:flex sm:items-center sm:justify-center sm:h-full">
+            {/* Mobile heading */}
             <span className="text-3xl mb-4 text-center sm:hidden block">
               Fareea Matahi
             </span>
             <Head>
               <title>Portfolio - Matahi</title>
             </Head>
+            {/* Main biography and description content */}
             <div className="flex flex-col z-20">
               <Heading>Portrait</Heading>
               <Paragraph className="indent-4">
@@ -70,6 +75,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        {/* Right side content displaying the AstroSkill component */}
         <div className=" absolute bottom-0 right-0 pb-5 pr-5 sm:p-0 sm:top-1/2 sm:-translate-y-1/2 sm:right-0 sm:w-1/2 sm:h-full overflow-hidden">
           <AstroSkill></AstroSkill>
         </div>

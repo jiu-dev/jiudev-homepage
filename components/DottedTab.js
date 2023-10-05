@@ -1,6 +1,7 @@
 import React, { Children } from 'react'
 import Capsule from './Capsule'
 
+// DottedTab is a component that displays content based on tab selection
 const DottedTab = ({ children }) => {
   let _body, _title, _subtitle
 
@@ -27,10 +28,12 @@ const DottedTab = ({ children }) => {
   )
 }
 
+// Represents the title component for the DottedTab.
 const DottedTabTitle = ({ children }) => (
   <h3 className="text-3xl">{children}</h3>
 )
 
+// Represents the subtitle component for the DottedTab, which can contain multiple items.
 const DottedTabSubtitle = ({ children }) => (
   <ul className="flex flex-wrap gap-4 mt-4 justify-center font-thin text-sm">
     {React.Children.map(children, (child, index) =>
@@ -41,12 +44,12 @@ const DottedTabSubtitle = ({ children }) => (
   </ul>
 )
 
+// Represents the main body content of the DottedTab, wrapped in a 'Capsule' component.
 const DottedTabBody = ({ children }) => (
-  <Capsule className="indent-6 font-thin text-sm text-justify p-6">
-    {children}
-  </Capsule>
+  <Capsule className=" font-thin text-sm text-justify p-6">{children}</Capsule>
 )
 
+// Associating sub-components with the main DottedTab component for ease of use and clarity.
 DottedTab.Title = DottedTabTitle
 DottedTab.Subtitle = DottedTabSubtitle
 DottedTab.Subtitle.Item = props => {

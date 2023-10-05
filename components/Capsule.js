@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 
+// Capsule styled component used for paragraphs
 const Capsule = ({ centerClassName, children, ...props }) => {
   return (
     <div className="flex items-stretch  rounded-3xl">

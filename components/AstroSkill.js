@@ -15,6 +15,7 @@ const Bubble = ({ children, ...props }) => {
   )
 }
 
+// Displaying astronaut image on the home page
 const AstroSkill = () => {
   return (
     <div className="sm:h-full sm:flex sm:justify-center sm:items-center">
