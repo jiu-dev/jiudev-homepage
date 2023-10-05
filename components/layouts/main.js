@@ -45,8 +45,8 @@ const Main = ({ children, router }) => {
         className="w-full h-full absolute"
       ></div>
       <div className="hidden">
-        <img src="/images/mars6.jpg" />
-        <img src="/images/space.jpg" />
+        <Image alt="mars-bg" width="10" height="10" src="/images/mars6.jpg" />
+        <Image alt="space-bg" width="10" height="10" src="/images/space.jpg" />
       </div>
 
       {/* Displaying the image "mars6.jpg" if dark mode is enabled */}

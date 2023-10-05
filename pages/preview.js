@@ -12,16 +12,18 @@ const DynamicPDFViewer = dynamic(
 )
 
 // Remove Space Portfolio experience.
-var reviewResume = Object.assign({}, mockResume)
-reviewResume.experiences = reviewResume.experiences.filter(exp => {
-  return exp.project !== 'Space Portfolio'
-})
+const resume = {
+  ...mockResume,
+  experiences: mockResume.experiences.filter(
+    exp => exp.project !== 'Space Portfolio'
+  )
+}
 
 // Review my resume at the /preview page
 const Preview = () => (
   <div style={{ height: '100vh' }}>
     <DynamicPDFViewer width="100%" height="100%">
-      <MyResume resume={reviewResume} />
+      <MyResume resume={resume} />
     </DynamicPDFViewer>
   </div>
 )

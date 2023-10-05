@@ -3,7 +3,15 @@ import { saveAs } from '@progress/kendo-file-saver'
 import { pdf } from '@react-pdf/renderer'
 import MyResume from './MyResume'
 import DownloadIcon from './icons/DownloadIcon'
-import { resume } from '../lib/mockData'
+import { mockResume } from '../lib/mockData'
+
+// Remove Space Portfolio experience.
+const resume = {
+  ...mockResume,
+  experiences: mockResume.experiences.filter(
+    exp => exp.project !== 'Space Portfolio'
+  )
+}
 
 const DownloadResume = () => {
   // An async function that generates a PDF of the resume and triggers a download.

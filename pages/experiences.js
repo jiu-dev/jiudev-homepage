@@ -13,7 +13,7 @@ const Experiences = () => {
 
   useEffect(() => {
     setCurrentExperience(experiences[selectedTab])
-  }, [selectedTab])
+  }, [selectedTab, experiences])
 
   return (
     <Layout>
@@ -71,8 +71,8 @@ const Experiences = () => {
 
             <DottedTab.Body>
               <div className="flex flex-col gap-4">
-                {currentExperience.description.map(line => (
-                  <span className="pl-4 relative">
+                {currentExperience.description.map((line, index) => (
+                  <span className="pl-4 relative" key={index}>
                     <div className="absolute w-2 h-2 rounded-sm bg-indigo-300 dark:bg-amber-500 top-[6px] -ml-5 "></div>
                     <BlockContent blocks={line} />
                   </span>

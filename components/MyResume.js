@@ -53,7 +53,11 @@ const MyResume = ({ resume }) => (
         <View style={styles.resumeHead}>
           <View style={styles.left}>
             <View style={styles.profilPicRing}>
-              <Image source="/images/matahi.png" style={styles.profilePic} />
+              <Image
+                alt="profil-picture"
+                source="/images/matahi.png"
+                style={styles.profilePic}
+              />
             </View>
           </View>
           <View style={styles.right}>
@@ -75,6 +79,7 @@ const MyResume = ({ resume }) => (
                 <ContactInfo
                   icon={
                     <Image
+                      alt="mail"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/mail.png`}
                     />
@@ -85,6 +90,7 @@ const MyResume = ({ resume }) => (
                 <ContactInfo
                   icon={
                     <Image
+                      alt="phone"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/phone.png`}
                     />
@@ -96,6 +102,7 @@ const MyResume = ({ resume }) => (
                 <ContactInfo
                   icon={
                     <Image
+                      alt="location"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/location.png`}
                     />
@@ -106,6 +113,7 @@ const MyResume = ({ resume }) => (
                 <ContactInfo
                   icon={
                     <Image
+                      alt="github"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/github.png`}
                     />
@@ -116,6 +124,7 @@ const MyResume = ({ resume }) => (
                 <ContactInfo
                   icon={
                     <Image
+                      alt="website"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/website.png`}
                     />
@@ -130,6 +139,7 @@ const MyResume = ({ resume }) => (
                 <HeaderView
                   icon={
                     <Image
+                      alt="skills"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/skills.png`}
                     />
@@ -140,8 +150,8 @@ const MyResume = ({ resume }) => (
                 <View style={{ ...styles.sectionBody }}>
                   <View style={styles.skillContainer}>
                     {resume.skills.map(skill => (
-                      <Text style={styles.skillItem} key={skill}>
-                        {skill}
+                      <Text style={styles.skillItem} key={skill.name}>
+                        {skill.name}
                       </Text>
                     ))}
                   </View>
@@ -153,6 +163,7 @@ const MyResume = ({ resume }) => (
                 <HeaderView
                   icon={
                     <Image
+                      alt="language"
                       style={{ ...styles.icon, backgroundColor: 'white' }}
                       src={`/icons/language.png`}
                     />
@@ -180,6 +191,7 @@ const MyResume = ({ resume }) => (
                 isDark
                 icon={
                   <Image
+                    alt="work"
                     style={{
                       ...styles.icon,
                       backgroundColor: '#1e2f40'
@@ -222,6 +234,7 @@ const MyResume = ({ resume }) => (
                 isDark
                 icon={
                   <Image
+                    alt="formation"
                     style={{ ...styles.icon, backgroundColor: '#1e2f40' }}
                     src={`/icons/formation.png`}
                   />

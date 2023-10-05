@@ -22,7 +22,7 @@ const Skill = ({ children, ...props }) => {
       break
   }
   return (
-    <div className={props.className}>
+    <div className={props.className} {...props}>
       {/* Display the skill name and its level label */}
       <div className="mb-1">
         <span className="">{children}</span>

@@ -1,12 +1,21 @@
 import Image from 'next/image'
 import Skill from '../components/Skill'
-import { SKILL_LEVELS } from '../lib/enums'
 import Layout from '../components/layouts/article'
 import ReactIcon from '../components/icons/ReactIcon'
 import NodeJSIcon from '../components/icons/NodeJSIcon'
 import NextJSIcon from '../components/icons/NextJSIcon'
 import TailwindIcon from '../components/icons/TailwindIcon'
 import MongoDBIcon from '../components/icons/MongoDBIcon'
+import { mockResume } from '../lib/mockData'
+
+// Filter out specific skills from the mockResume and store the result in mockSkills
+var mockSkills = mockResume.skills.filter(
+  skill =>
+    skill.name !== 'Express' &&
+    skill.name !== 'MSSQL' &&
+    skill.name !== 'Angular' &&
+    skill.name !== 'Azure Devops'
+)
 
 const Skills = () => {
   // Helper function to render the "astro-meditation" image surrounded by skill icons
@@ -49,15 +58,11 @@ const Skills = () => {
             <span className="text-3xl mb-4 text-center sm:hidden block">
               Mes compétences
             </span>
-            <Skill className="" level={SKILL_LEVELS.EXPERT}>
-              React
-            </Skill>
-            <Skill className="" level={SKILL_LEVELS.INTERMEDIATE}>
-              NextJS
-            </Skill>
-            <Skill className="" level={SKILL_LEVELS.ADVANCED}>
-              NodeJS
-            </Skill>
+            {mockSkills.slice(0, 3).map(skill => (
+              <Skill key={skill.name} level={skill.level}>
+                {skill.name}
+              </Skill>
+            ))}
           </div>
           {/* Rendered image only on larger screens */}
           <div className="hidden lg:flex lg:order-none flex-none items-center justify-center w-64 relative">
@@ -65,15 +70,11 @@ const Skills = () => {
           </div>
           {/* Skill sets displayed on the right side */}
           <div className="flex-none w-full lg:w-auto lg:grow px-8 pt-0 pb-8 lg:p-8 flex flex-col gap-4">
-            <Skill className="" level={SKILL_LEVELS.EXPERT}>
-              Tailwind
-            </Skill>
-            <Skill className="" level={SKILL_LEVELS.INTERMEDIATE}>
-              ASP.Net
-            </Skill>
-            <Skill className="" level={SKILL_LEVELS.INTERMEDIATE}>
-              Azure Devops
-            </Skill>
+            {mockSkills.slice(3, 6).map(skill => (
+              <Skill key={skill.name} level={skill.level}>
+                {skill.name}
+              </Skill>
+            ))}
           </div>
         </div>
         {/* Rendered image on smaller screens */}
